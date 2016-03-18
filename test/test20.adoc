@@ -8,34 +8,37 @@ Melon Link http://melon.com[click]
 * 멜론 프레임워크 백과 테스트 문서 입니다.
 * 본 문서는 asciidoc 기반으로 작성된 문서이며 ATOM 에디터, asciidoctor를 통해 생성 되었습니다.
 
-:toc:
-== 아스키닥이란?
+What's AsciiDoc?
+~~~~~~~~~~~~~~~~~
 
-=== What is asciidoc
 AsciiDoc is a human-readable text document format for writing notes,
 documentation, articles, books, ebooks, slideshows, web pages, man pages and
 blogs, and more. AsciiDoc files can be translated to many formats including
 HTML, PDF, EPUB, and man page.
+
 To learn more, visit the AsciiDoc home page at
 http://www.methods.co.nz/asciidoc/.
 
-About Framework
-~~~~~~~~~~~~~~~~
+About AsciiDocLIVE
+~~~~~~~~~~~~~~~~~~
 AsciiDocLIVE is currently in *alpha* stage. This means there are likely a _lot_
 of bugs, and even more ways to make it better.
+
 If you have any questions, suggestions or other feedback, we'd greatly
 appreciate it if you could drop us an e-amil at feedback@asciidoclive.com. Hope
 to hear from you soon!
 
+
 [[cheat-sheet]]
 AsciiDoc Mini Cheat Sheet
 ~~~~~~~~~~~~~~~~~~~~~~~~~
+
 To help you get started, here're some snippets from the
 http://powerman.name/doc/asciidoc[AsciiDoc Cheet Sheet]. Feel free to poke
 around :)
 
-==== Text Styles
-
+Text Styles
+^^^^^^^^^^^
 * normal, _italic_, *bold*, +mono+.
 * ``double quoted'', `single quoted'.
 * normal, ^super^, ~sub~.
@@ -58,8 +61,10 @@ Lists
 
 * Q: How did the programmer die in the shower?
   A: He read the shampoo instructions:
+
   . Lather, rinse.
   . Repeat.
+
 * There are only 10 kinds of people in this world:
   - Those who understand binary.
   - Those who don't.
@@ -84,6 +89,7 @@ public void main(){
     System.out.println("hello world");
 }
 
+
 * Quotes:
 +
 [quote,"Charles Dickens","A Tale of Two Cities"]
@@ -98,4 +104,37 @@ it was the age of foolishness...
 +
 image:../resource/image/melon.png[alt="melon.",width=128,height=128]
 
+
+
 * Pass-through: pass:[<div align="center"><b>pass through content</b></div>]
+
+
+[source,python]
+if n < 0: print 'Hello World!'
+
+:language: python
+
+[source]
+if n < 0: print 'Hello World!'
+
+[source,ruby,numbered]
+[true, false].cycle([0, 1, 2, 3, 4]) do |a, b|
+    puts "#{a.inspect} => #{b.inspect}"
+
+[source,java]
+@Test
+public void blockiptest(){
+  PageEntityMap param = new PageEntityMap();
+  param = new PageEntityMap(Pagination.FIRST_INDEX, 70);
+  PageList<EntityMap> iplist = null;
+  param.put("searchText", "관리");
+  iplist = blacklist.listPageBlockIp(param);
+  for (int i = 0; i < iplist.getTotalCount(); i++) {
+    if(iplist.get(i).get("contryCd") == null){
+      iplist.get(i).put("contryCd", "미입력");
+      System.out.println("decsFrom : " + iplist.get(i).get("decsFrom")+ " / date : " + iplist.get(i).get("regDate") +" User : "+ iplist.get(i).get("regUser") );
+    }
+    else
+      System.out.println("decsFrom : " + iplist.get(i).get("decsFrom")+ " / date : " + iplist.get(i).get("regDate") +" User : "+ iplist.get(i).get("regUser") );
+  }
+}

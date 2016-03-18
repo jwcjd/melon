@@ -7,8 +7,65 @@ Hey! I'm your first Markdown document in **StackEdit**[^stackedit]. Don't delete
 ----------
 
 
+|                  | ASCII                        | HTML              |
+ ----------------- | ---------------------------- | ------------------
+| Single backticks | `'Isn't this fun?'`            | 'Isn't this fun?' |
+| Quotes           | `"Isn't this fun?"`            | "Isn't this fun?" |
+| Dashes           | `-- is en-dash, --- is em-dash` | -- is en-dash, --- is em-dash |
+
+
+
+| Item     | Value | Qty   |
+| :------- | ----: | :---: |
+| Computer | $1600 |  5    |
+| Phone    | $12   |  12   |
+| Pipe     | $1    |  234  |
+
+[dfadfs]
+
+
+| ITME     |
+| -------- |
+
+
+~~~~~~~~
+hi
+~~~~~~~~
+
+
 Documents
 -------------
+
+<table>
+<tr><th>A<th>B
+<tr><td>1<td>2
+<tr><td>3<td>4
+</table>
+
+pandoc extensions:
+A  B
+-- --
+1  2
+3  4
+
+pandoc extension:
++---+---+
+| A | B |
++---+---+
+| 1 | 2 |
++---+---+
+| 3 | 4 |
++---+---+
+
+
+
+[width="20%", options="header"]
+|===
+|A|B
+|1|2
+|3|4
+|===
+
 
 StackEdit stores your documents in your browser, which means all your documents are automatically saved locally and are accessible **offline!**
 

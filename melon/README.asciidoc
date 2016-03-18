@@ -1,0 +1,88 @@
+== Highlight for Asciidoc
+
+
+This repository has highlight configurations of AsciiDoc language for text editors:
+
+- Notepad++ 
+- gedit
+
+
+* link:CONTRIBUTING.md[How to contribute]
+
+=== Notepad++ 
+
+This is a simple highlight for Notepad++.
+
+NOTE: There is a video that shows how to install: http://www.youtube.com/watch?v=_i-KxSb7cJM
+
+==== How to install
+Download and save the file https://github.com/edusantana/asciidoc-highlight/raw/master/notepad%2B%2B/userDefineLang.xml[notepad++/userDefineLang.xml] 
+
+Go to Notepad++ menu "Language/Define your language" and import that file.
+
+CAUTION: If you are using the Notepad++ in portugese, it has a translation error: The Import and Export button are switched.
+
+How to create Syntax Highlighting::
+- http://sourceforge.net/apps/mediawiki/notepad-plus/index.php?title=User_Defined_Languages 
+- http://sourceforge.net/apps/mediawiki/notepad-plus/index.php?title=Category:Syntax_Highlighting
+- http://udl20.weebly.com
+
+=== gedit
+
+This file was originaly downloaded from https://launchpad.net/asciidoc-gtk-highlight
+But I'm creating new versions here on github.
+
+==== How to install
+
+===== Cloning repository
+
+.Clone repository
+----
+cd YOURDIR
+git clone https://github.com/edusantana/asciidoc-highlight
+----
+
+.Create a symbolic link
+----
+mkdir -p ~/.local/share/gtksourceview-3.0/language-specs/
+cd ~/.local/share/gtksourceview-3.0/language-specs/
+ln -s YOURDIR/asciidoc-highlight/gedit/asciidoc.lang
+mkdir -p ~/.local/share/gtksourceview-2.0/language-specs/;
+cd ~/.local/share/gtksourceview-2.0/language-specs/
+ln -s YOURDIR/asciidoc-highlight/gedit/asciidoc.lang
+----
+
+NOTE: I recommend this method because you can keep updating
+from repository:
+
+.Getting updates
+----
+cd asciidoc-highlight
+git pull
+----
+
+===== Without cloning
+
+.GtkSourceView version 3
+----
+mkdir -p ~/.local/share/gtksourceview-3.0/language-specs/
+cd ~/.local/share/gtksourceview-3.0/language-specs/
+wget https://raw.github.com/edusantana/asciidoc-highlight/master/gedit/asciidoc.lang
+----
+
+.GtkSourceView version 2
+----
+mkdir -p ~/.local/share/gtksourceview-2.0/language-specs/;
+cd ~/.local/share/gtksourceview-2.0/language-specs/
+wget https://raw.github.com/edusantana/asciidoc-highlight/master/gedit/asciidoc.lang
+----
+
+==== How to customize
+
+https://developer.gnome.org/gtksourceview/stable/
+https://developer.gnome.org/gtksourceview/stable/ch02.html
+
+=== Follow the repository to get updates
+
+Remember to follow the repository to be notified of updates.
+

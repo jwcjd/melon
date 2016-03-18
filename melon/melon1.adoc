@@ -84,6 +84,7 @@ public void main(){
     System.out.println("hello world");
 }
 
+== 기타기능
 * Quotes:
 +
 [quote,"Charles Dickens","A Tale of Two Cities"]
@@ -97,5 +98,11 @@ it was the age of foolishness...
 * Images:
 +
 image:../resource/image/melon.png[alt="melon.",width=128,height=128]
+image:../resource/image/melon.png[alt="melon.",width=256,height=256]
+
+* Video:
++
+video::../resource/video/SampleVideo_1280x720_1mb.mp4[width=640, start=60, end=140, options=autoplay]
+
 
 * Pass-through: pass:[<div align="center"><b>pass through content</b></div>]

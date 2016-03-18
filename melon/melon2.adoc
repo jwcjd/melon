@@ -1,0 +1,26 @@
+= Welcome Melon Framework Encyclopaedia
+-------------------------------------
+
+*멜론 프레임 워크 대백과 2페이지*
+
+:toc:
+== 멜론 프레임워크
+
+* Quotes:
++
+[quote,"Charles Dickens","A Tale of Two Cities"]
+It was the best of times, it was the worst of times, it was the age of wisdom,
+it was the age of foolishness...
+
+* Links:
+** http://asciidoclive.com/[AsciiDocLIVE] is awesome!
+** Go to <<cheat-sheet, top of cheat sheet>>
+
+* Images:
++
+image:../resource/image/melon.png[alt="melon.",width=128,height=128]
+image:../resource/image/melon.png[alt="melon.",width=256,height=256]
+
+* Video:
++
+video::../resource/video/SampleVideo_1280x720_1mb.mp4[width=640, start=60, end=140, options=autoplay]
